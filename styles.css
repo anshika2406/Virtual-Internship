@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9db7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dropdown-wrapper {
+    position: relative;
+    width: 215px; /* Adjust width to match your desired design */
+}
+
+.dropdown::after {
+    content: '\f078'; /* Font Awesome icon for down arrow */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: white;
+    position: absolute;
+    left: 85%;
+    top: 35%;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-wrapper:focus-within .dropdown::after {
+    transform: rotate(180deg); /* Rotate arrow when select is focused */
+}
+
+.dropdown-select {
+    border-radius: 100px;
+    background-color: #BA1369;
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+}
+
+.dropdown-select option {
+    background-color: #ffffff;
+    color: #000000;
+    
+
+}
+
+
+.search-input {
+    border: none;
+    font-size: 16px;
+    outline: none;
+    width: 400px;
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.search-input::placeholder {
+    text-align: left;
+    color: #BA1369;
+    
+}
+
+.search-button {
+    color: #ba1369;
+    border: none;
+    background-color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+.search-button i {
+    font-size: 16px;
+}
